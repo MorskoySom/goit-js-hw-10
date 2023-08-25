@@ -1,4 +1,6 @@
 import axios from "axios";
+import Notiflix from 'notiflix';
+
 const elem = {
     breedSelect: document.querySelector(".breed-select"),
     loader: document.querySelector('.loader'),

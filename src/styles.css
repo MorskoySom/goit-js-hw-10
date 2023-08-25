@@ -8,6 +8,7 @@
 .card {
     display: flex;
     gap: 40px;
+    margin-top: 50px;
 }
 
 .description {
@@ -18,3 +19,8 @@
     text-align: center;
 }
 
+.loader {
+    text-align: center;
+    font-size: 46;
+    color: chartreuse;
+}

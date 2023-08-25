@@ -2,6 +2,8 @@ import SlimSelect from 'slim-select';
 import axios from "axios";
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
 import 'slim-select/dist/slimselect.css';
+import Notiflix from 'notiflix';
+
 const elem = {
     breedSelect: document.querySelector(".breed-select"),
     loader: document.querySelector('.loader'),
@@ -20,7 +22,7 @@ fetchBreeds()
         });
     })
     .catch(error => {
-        console.error('An error occurred:', error);
+        Notiflix.Notify.failure('OOPS...kitty ran away');
     });
 elem.breedSelect.addEventListener('change', function (event) {
     const breedId = event.currentTarget.value;
@@ -31,7 +33,7 @@ elem.breedSelect.addEventListener('change', function (event) {
             createMarkupDescription(data);
         })
         .catch(error => {
-            console.error('An error occurred:', error);
+            Notiflix.Notify.failure('OOPS...kitty ran away');
         });
 });
 
