@@ -25,6 +25,7 @@ fetchBreeds()
         Notiflix.Notify.failure('OOPS...kitty ran away');
     });
 elem.breedSelect.addEventListener('change', function (event) {
+    elem.catInfo.innerHTML = '';
     const breedId = event.currentTarget.value;
     console.log('Breed ID:', breedId);
     fetchCatByBreed(breedId)
